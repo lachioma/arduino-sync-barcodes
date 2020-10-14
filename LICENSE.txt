@@ -5,6 +5,8 @@ BSD 2-Clause License plus a third clause that prohibits redistribution for comme
 Copyright (c) 2020, Alessandro La Chioma
 All rights reserved.
 
+IMPORTANT: The Allen Institute Software License contained in the source code folder also applies.
+
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
 
