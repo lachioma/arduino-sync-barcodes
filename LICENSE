@@ -1,4 +1,5 @@
-BSD 2-Clause License
+BSD 2-Clause License plus a third clause that prohibits redistribution for commercial
+purposes without further permission.
 
 Copyright (c) 2020, Alessandro La Chioma
 All rights reserved.
@@ -12,6 +13,12 @@ modification, are permitted provided that the following conditions are met:
 2. Redistributions in binary form must reproduce the above copyright notice,
    this list of conditions and the following disclaimer in the documentation
    and/or other materials provided with the distribution.
+   
+3. Redistributions for commercial purposes are not permitted without 
+   Alessandro La Chioma's written permission.
+   For purposes of this license, commercial purposes is the incorporation of the
+   Alessandro La Chioma's software into anything for which you will charge fees or
+   other compensation. 
 
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
 AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
