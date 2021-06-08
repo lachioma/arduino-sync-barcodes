@@ -17,7 +17,7 @@ Read more about synchronizing multiple data streams:
 
 ## More about Direct Port Access ("Port manipulation")
 
-**N.B.** the way port manipulation is implemented depends on the exact microcontroller used by the board. In this case I used Arduino Due, whose the microcontroller is SAM3X. With other boards things could work differently (e.g. it will certainly be different for ATmega8 and ATmega168). So what is written here <https://www.arduino.cc/en/Reference/PortManipulation> does not apply to Arduino Due!
+**N.B.** the way port manipulation is implemented depends on the exact microcontroller used by the board. In this case I used Arduino Due, whose microcontroller is SAM3X. With other boards things could work differently (e.g. it will certainly be different for ATmega8 and ATmega168). So what is written here <https://www.arduino.cc/en/Reference/PortManipulation> does not apply to Arduino Due!
 
 
 If you use 
