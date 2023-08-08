@@ -14,13 +14,14 @@ int OUTPUT_PIN_3   = 29; //PD6
 int OUTPUT_PIN_LED = 13; 
 // Barcode settings:
 int BARCODE_BITS = 12; // 2^BARCODE_BITS different barcodes (e.g. 2^8 = 256), with BARCODE_BITS (0/1) bars 
+unsigned int barcode_max_value = 2^BARCODE_BITS - 1;
 int INITIATION_PULSE = 100;   // ms. Duration of the HIGH state of initiation pulse. The initiation pulse consists of a HIGH state followed by a LOW state of the same duration, followed by the barcode.
 int BARCODE_DURATION = 600;   // ms. Duration of entire barcode, excluding initial pulse. It must be a multiple of BARCODE_BITS
 int BAR_DURATION = BARCODE_DURATION / BARCODE_BITS; // ms. Duration of each individual 1/0 bar.
 int INTER_BARCODE_INTERVAL = 10000; // ms. Time interval between barcodes.
 int delay_per_iteration = BAR_DURATION; // ms. Duration of each individual 1/0 bar.
 int INITIAL_BARCODE_VALUE = 10; // First barcode value. Do not start from 0 because 0 has no HIGH states in binary; 10 in binary is 1010.
-long barcode;
+unsigned int barcode; // Barcode value in decimals (unsigned int goes from 0 to 65,535 ((2^16) - 1))
 
 void setup() {
   
@@ -41,7 +42,13 @@ void setup() {
 
 void loop() {
 
-  barcode += 1; // increment barcode on each cycle
+  if (barcode >= barcode_max_value){
+    barcode = INITIAL_BARCODE_VALUE;
+  }
+  else {
+    barcode += 1; // increment barcode on each cycle
+  }
+  
 
 //  digitalWrite(OUTPUT_PIN_1, HIGH);   // initialize with pulse
 //  digitalWrite(OUTPUT_PIN_2, HIGH);   // initialize with pulse, delay +2.5 us
