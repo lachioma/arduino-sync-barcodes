@@ -60,7 +60,7 @@ void loop() {
   t_init_pulse = micros();
   digitalWrite(OUTPUT_PIN_LED, HIGH);   // initialize with pulse
   //delay(INITIATION_PULSE);
-  while ( micros()-t_init_pulse) < INITIATION_PULSE){
+  while ( (micros()-t_init_pulse) < INITIATION_PULSE){
     ; // just wait
   }
 //  digitalWrite(OUTPUT_PIN_1, LOW);    // set to low value for pulse duration
@@ -70,7 +70,7 @@ void loop() {
   t_init_pulse = micros();
   digitalWrite(OUTPUT_PIN_LED, LOW);
   //delay(INITIATION_PULSE);
-  while ( micros()-t_init_pulse) < INITIATION_PULSE){
+  while ( (micros()-t_init_pulse) < INITIATION_PULSE){
     ; // just wait
   }
 
@@ -96,8 +96,8 @@ void loop() {
     }
 
     //delay(delay_per_iteration);
-    while ( micros()-t_delay_per_iteration) < delay_per_iteration){
-        ; // just wait
+    while ( (micros()-t_delay_per_iteration) < delay_per_iteration){
+      ; // just wait
     }
   }
   
@@ -108,8 +108,8 @@ void loop() {
   t_inter_barcode_interval = micros();
   digitalWrite(OUTPUT_PIN_LED, LOW);
   //delay(INTER_BARCODE_INTERVAL);       // wait for interval
-  while ( micros()-t_inter_barcode_interval) < INTER_BARCODE_INTERVAL){
-      ; // just wait
+  while ( (micros()-t_inter_barcode_interval) < INTER_BARCODE_INTERVAL){
+    ; // just wait
   }
 
 }
