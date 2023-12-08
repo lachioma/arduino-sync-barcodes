@@ -18,8 +18,8 @@ unsigned int barcode_max_value = pow(2,BARCODE_BITS) - 1;
 unsigned int INITIATION_PULSE = 100*1000;   // us. Duration of the HIGH state of initiation pulse. The initiation pulse consists of a HIGH state followed by a LOW state of the same duration, followed by the barcode.
 unsigned int BARCODE_DURATION = 600*1000;   // us. Duration of entire barcode, excluding initial pulse. It must be a multiple of BARCODE_BITS
 unsigned int BAR_DURATION = BARCODE_DURATION / BARCODE_BITS; // us. Duration of each individual 1/0 bar.
-unsigned int INTER_BARCODE_INTERVAL = 10000*1000; // us. Time interval between barcodes.
-unsigned int delay_per_iteration = BAR_DURATION; // ms. Duration of each individual 1/0 bar.
+unsigned int INTER_BARCODE_INTERVAL =  3*1000000; // us. Time interval between barcodes.
+unsigned int delay_per_iteration = BAR_DURATION;  // us. Duration of each individual 1/0 bar.
 unsigned int INITIAL_BARCODE_VALUE = 10; // First barcode value. Do not start from 0 because 0 has no HIGH states in binary; 10 in binary is 1010.
 unsigned int barcode; // Barcode value in decimals (unsigned int goes from 0 to 65,535 ((2^16) - 1))
 unsigned long t_init_pulse = micros();             // will store time initiation pulse
