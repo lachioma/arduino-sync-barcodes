@@ -14,7 +14,7 @@ int OUTPUT_PIN_3   = 29; //PD6
 int OUTPUT_PIN_LED = 13; 
 // Barcode settings:
 unsigned int BARCODE_BITS = 12; // 2^BARCODE_BITS different barcodes (e.g. 2^8 = 256), with BARCODE_BITS (0/1) bars 
-unsigned int barcode_max_value = 2^BARCODE_BITS - 1;
+unsigned int barcode_max_value = pow(2,BARCODE_BITS) - 1;
 unsigned int INITIATION_PULSE = 100*1000;   // us. Duration of the HIGH state of initiation pulse. The initiation pulse consists of a HIGH state followed by a LOW state of the same duration, followed by the barcode.
 unsigned int BARCODE_DURATION = 600*1000;   // us. Duration of entire barcode, excluding initial pulse. It must be a multiple of BARCODE_BITS
 unsigned int BAR_DURATION = BARCODE_DURATION / BARCODE_BITS; // us. Duration of each individual 1/0 bar.
